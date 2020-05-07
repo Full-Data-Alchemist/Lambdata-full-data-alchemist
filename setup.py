@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="Full_data_alchemy", # the name that you will install via pip
-    version="1.0",
+    version="1.1",
     author="Full Data Alchemist",
     author_email="imani.beasley.72@gmail.com",
     description="A short description",
@@ -14,5 +14,5 @@ setup(
     #license="MIT",
     url="https://github.com/Full-Data-Alchemist/Lambdata-full-data-alchemist",
     #keywords="",
-    packages=find_packages() # ["my_lambdata"]
+    packages=find_packages() # ["Full_data_alchemy"]
 )
