@@ -4,12 +4,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+v = {editable = true,version = "*"}
+twine = "*"
 
 [packages]
 pandas = "*"
-shapely = "*"
 matplotlib = "*"
-
+sklearn = "*"
 
 [requires]
 python_version = "3.7"

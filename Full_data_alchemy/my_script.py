@@ -1,8 +1,8 @@
-#my_script.py
+#Full_data_alchemy/my_script.py
 
 import pandas as pd
 
-from my_mod import enlarge
+from Full_data_alchemy.my_mod import enlarge
 
 
 
