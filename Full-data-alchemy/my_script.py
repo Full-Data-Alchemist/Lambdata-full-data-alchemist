@@ -1,4 +1,4 @@
-#my_alchemy.py
+#my_script.py
 
 import pandas as pd
 
