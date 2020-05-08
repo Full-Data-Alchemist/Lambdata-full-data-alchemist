@@ -3,17 +3,25 @@ import pandas as pd
 def add_state_names(my_df):
     # TODO
 
-    return my_df
-states_dic = {}
+    new_df = my_df.copy()
+    names_map = {
+        "ks":"Kan",
+            "CO":"Col",
+            "OK":"Okl",
+            "KT":"Kenn",
+            "TX":"Tex"
+            }
 
-df = pd.DataFrame({"abbrev":["KS", "CO", "OK","KT, TX"]})
+    new_df['name'] = new_df['abbrev'].map(names_map)
 
 
+
+    return new_df
 
 if __name__ == "__main__":
 
-    df = pd.DataFrame({"abbrev":["KS", "CO", "OK","KT, TX"]})
+    df = pd.DataFrame({"State":["KS", "CO", "OK","KT, TX"]})
     print(df.head())
 
-    df2.add_state_names(df)
+    df2 = add_state_names(df)
     print(df2.head())
