@@ -1,7 +1,6 @@
 import pandas as pd
 
 def add_state_names(my_df):
-    # TODO
 
     new_df = my_df.copy()
     names_map = {
@@ -13,9 +12,6 @@ def add_state_names(my_df):
             }
 
     new_df['name'] = new_df['abbrev'].map(names_map)
-
-
-
     return new_df
 
 if __name__ == "__main__":
