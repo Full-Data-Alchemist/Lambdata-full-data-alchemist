@@ -1,7 +1,13 @@
 import pandas as pd
 
 def add_state_names(my_df):
-    # TODO
+    '''
+    Adds a column of states names to accompany a corresponding column of 
+    states abbreviations
+
+    Params:
+        my_df(panda.DataFrame) has a col called "abbrev"  
+    '''
 
     new_df = my_df.copy()
     names_map = {
