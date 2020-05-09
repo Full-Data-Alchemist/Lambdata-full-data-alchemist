@@ -6,7 +6,12 @@ from sklearn.model_selection import train_test_split
 def enlarge(n):
     return n * 100
 
+def splitter(df):
+    train, test = train_test_split(df)
 
+    X = train
+    y = test
+    return X, y
 
 # def shap_val(row, model, encoder):
 #     row = X_test.loc[[row]]
