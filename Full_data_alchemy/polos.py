@@ -1,7 +1,15 @@
 #full_data_alchemy/polos.py
 
 class Polo:
-    pass
+    def __int__(self, size:str, color:str):
+        self.size = size
+        self.color = color
+        
+    def wash(self):
+        print(f"washing the")
+
+
+
 
 
 if __name__ == '__main__':
