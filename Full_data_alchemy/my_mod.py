@@ -8,15 +8,28 @@ def enlarge(n):
     Function ellarges a nember
     '''
     return n * 100
+class splitter:
+    '''
+    TODO
+    '''
+    def __inti__(self, df, trn_size:float, tst_size:float, target:str):
+        
 
-def splitter(df, trn_size:float, tst_size:float, target:str):
-    '''
-    function automaticaly creates a train and tests split
-    '''
-    train, test = train_test_split(df, 
-                                    train_size = trn_size,
-                                    test_size = tst_size,
-                                    stratify = target)
+        pass
+
+
+    def splitter(self, df, trn_size:float, tst_size:float, target:str):
+        '''
+        function automaticaly creates a train and tests split
+        '''
+        train, test = train_test_split(df, 
+                                        train_size = trn_size,
+                                        test_size = tst_size,
+                                        stratify = target)
+        X = train
+        y = test
+        return X, y
+
 
 # def shap_val(row, model, encoder):
 #     row = X_test.loc[[row]]
