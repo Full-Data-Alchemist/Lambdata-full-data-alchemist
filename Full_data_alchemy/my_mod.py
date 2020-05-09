@@ -4,9 +4,19 @@
 from sklearn.model_selection import train_test_split
 
 def enlarge(n):
+    '''
+    Function ellarges a nember
+    '''
     return n * 100
 
-
+def splitter(df, trn_size:float, tst_size:float, target:str):
+    '''
+    function automaticaly creates a train and tests split
+    '''
+    train, test = train_test_split(df, 
+                                    train_size = trn_size,
+                                    test_size = tst_size,
+                                    stratify = target)
 
 # def shap_val(row, model, encoder):
 #     row = X_test.loc[[row]]
