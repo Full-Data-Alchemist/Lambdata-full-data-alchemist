@@ -1,33 +1,22 @@
 import pandas as pd
 
-def add_state_names(my_df):
-    '''
-    Adds a column of states names to accompany a corresponding column of 
-    states abbreviations
+class MyFrame(pd.DataFrame):    
 
-    Params:
-        my_df(panda.DataFrame) has a col called "abbrev"  
-    '''
-
-    new_df = my_df.copy()
-    names_map = {
-        "ks":"Kan",
-            "CO":"Col",
-            "OK":"Okl",
-            "KT":"Kenn",
-            "TX":"Tex"
-            }
-
-    new_df['name'] = new_df['abbrev'].map(names_map)
-
-
-
-    return new_df
+    def add_state_names(self):
+        """
+        Adds a column of state names to accompany a corresponding column of state abbreviation.
+        """
+        names_map = {"CA":"Cali", "CO":"Colo", "CT":"Conn"}
+        self["name"] = self["abbrev"].map(names_map) # see: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html
+        
 
 if __name__ == "__main__":
 
-    df = pd.DataFrame({"State":["KS", "CO", "OK","KT, TX"]})
-    print(df.head())
+    my_frame = MyFrame({"State":["KS", "CO", "OK","KT, TX"]})
+    print(my_frame.columns)
+    print(my_frame.head())
 
-    df2 = add_state_names(df)
-    print(df2.head())
+    my_frame.add_state_names()
+    print(my_frame.head())
+    
+    
